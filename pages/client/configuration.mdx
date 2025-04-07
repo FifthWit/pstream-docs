@@ -4,22 +4,22 @@ title: 'Configuration'
 
 # Client Config Reference
 
-The config for the sudo-flix can be provided in 2 different ways, depending on how you are hosting sudo-flix:
+The config for the P-Stream can be provided in 2 different ways, depending on how you are hosting P-Stream:
 
 - If you are using a static web hoster (such as Vercel, Netlify or Cloudflare Pages), you can use [environment variables](#method-1-environment-variables).
-- If you are hosting sudo-flix using shared hosting (such as cPanel or FTP), please use [the config file](#method-2-config-file).
+- If you are hosting P-Stream using shared hosting (such as cPanel or FTP), please use [the config file](#method-2-config-file).
 
 Both methods can specify any of the keys listed in the [Shared Config](#config-reference-shared-config) section.
 
 ## Method 1 - Environment Variables
 
-The sudo-flix client can be configured using environment variables **at build time**. You cannot use this method if hosting the pre-built `sudo-flix.zip` files!
+The P-Stream client can be configured using environment variables **at build time**. You cannot use this method if hosting the pre-built `pstream.zip` files!
 
-Using environment variables to configure sudo-flix also allows configuration of some [environment variable specific keys](#config-reference-environment-variables-only).
+Using environment variables to configure P-Stream also allows configuration of some [environment variable specific keys](#config-reference-environment-variables-only).
 
 ## Method 2 - Config File
 
-When using the pre-built `sudo-flix.zip`, you can set the configuration in the `config.js` file.
+When using the pre-built `pstream.zip`, you can set the configuration in the `config.js` file.
 
 The `config.js` file contains a JavaScript object which must be set to the correct values:
 
@@ -36,7 +36,7 @@ window.__CONFIG__ = {
 - Type: `string`
 - Default: `""`
 
-This is the **read** API key from TMDB to allow sudo-flix to search for media. [Get one by following our guide](./tmdb.mdx).
+This is the **read** API key from TMDB to allow P-Stream to search for media. [Get one by following our guide](./tmdb.mdx).
 
 <Caution>
   **Required. The client will not work properly if this is not configured.**
@@ -85,9 +85,11 @@ Setting this configuration value to `true` will enable the history-router.
 - Default: `""`
 - Example: `"https://backend.example.com"`
 
-This is the URL for the sudo-flix backend server which handles cross-device syncing.
+This is the URL for the P-Stream backend server which handles cross-device syncing.
 
-The backend server can be found at https://github.com/sussy-code/backend and is offered as a [Docker](https://docs.docker.com/get-started/overview/) image for deployment.
+We recommend `https://backend.fifthwit.net" Our Community instance hosted by FifthWit.
+
+The backend server can be found at https://github.com/FifthWit/open-backend
 
 Backend URL must **not** end with a slash.
 
@@ -198,7 +200,7 @@ The Google Analytics ID for tracking user behavior. If omitted, no tracking will
 
 - Type: `string`
 - Default: `""`
-- Example: `"https://sudo-flix.lol"`
+- Example: `"https://P-Stream.lol"`
 
 The domain where the app lives. Only required when having the [`VITE_OPENSEARCH_ENABLED`](#vite-opensearch-enabled) option enabled.
 

@@ -8,7 +8,7 @@ title: 'Deploy'
 
 <Steps>
   <Steps.Step>
-    Click [here](https://github.com/sussy-code/smov/fork) to fork the sudo-flix Github repository
+    Click [here](https://github.com/Pasithea0/smov/fork) to fork the P-Stream Github repository
   </Steps.Step>
   
   <Steps.Step>
@@ -28,7 +28,7 @@ title: 'Deploy'
   </Steps.Step>
   
   <Steps.Step>
-    Select your own fork of the sudo-flix Github repository.
+    Select your own fork of the P-Stream Github repository.
   </Steps.Step>
   
   <Steps.Step>
@@ -47,7 +47,7 @@ title: 'Deploy'
   </Steps.Step>
   
   <Steps.Step>
-    Congrats! You have your own version of sudo-flix hosted.
+    Congrats! You have your own version of P-Stream hosted.
   </Steps.Step>
   
   <Steps.Step>
@@ -58,7 +58,7 @@ title: 'Deploy'
 ## Method 2 - Cloudflare Pages (Best host)
 <Steps>
   <Steps.Step>
-    [Fork sudo-flix](https://github.com/sussy-code/smov/fork) on Github.
+    [Fork P-Stream](https://github.com/Pasithea0/smov/fork) on Github.
   </Steps.Step>
 
   <Steps.Step>
@@ -81,11 +81,11 @@ title: 'Deploy'
   </Steps.Step>
 
   <Steps.Step>
-    Select the blue button that says "Connect to git" and then connect the Github account you forked sudo-flix on.
+    Select the blue button that says "Connect to git" and then connect the Github account you forked P-Stream on.
   </Steps.Step>
 
   <Steps.Step>
-    Now you can select repositories from your github account, select your fork of sudo-flix and click "Begin setup".
+    Now you can select repositories from your github account, select your fork of P-Stream and click "Begin setup".
   </Steps.Step>
 
   <Steps.Step>
@@ -109,7 +109,7 @@ title: 'Deploy'
   </Steps.Step>
 
   <Steps.Step>
-    Congrats! You have your own version of sudo-flix hosted for **FREE**.
+    Congrats! You have your own version of P-Stream hosted for **FREE**.
   </Steps.Step>
 </Steps>
 
@@ -117,7 +117,7 @@ title: 'Deploy'
 
 <Steps>
   <Steps.Step>
-    Download the file `sudo-flix.zip` from the latest release: https://github.com/sussy-code/smov/releases/latest.
+    Download the file `pstream.zip` from the latest release: https://github.com/Pasithea0/smov/releases/latest.
   </Steps.Step>
   
   <Steps.Step>
@@ -154,17 +154,17 @@ title: 'Deploy'
   </Steps.Step>
   
   <Steps.Step>
-    Congrats! You have your own version of sudo-flix hosted.
+    Congrats! You have your own version of P-Stream hosted.
   </Steps.Step>
 </Steps>
 
 ## Method 4 - Docker Compose - Home Network
 
-This method is meant for those using a desktop device or single board computer with a minimum of 4GB of RAM such as a [Raspberry Pi](https://www.raspberrypi.com/) to run sudo-flix on there home network for network connected devices.
+This method is meant for those using a desktop device or single board computer with a minimum of 4GB of RAM such as a [Raspberry Pi](https://www.raspberrypi.com/) to run P-Stream on there home network for network connected devices.
 
 <Steps>
   <Steps.Step>
-    1. Ensure you have [docker](https://docs.docker.com/get-docker/) installed. In a newly created directory called `sudo-flix` create a file called `docker-compose.yaml`. Paste the contents of the code block below into this file.
+    1. Ensure you have [docker](https://docs.docker.com/get-docker/) installed. In a newly created directory called `P-Stream` create a file called `docker-compose.yaml`. Paste the contents of the code block below into this file.
   
       ```yaml
       version: "3.8"
@@ -212,14 +212,14 @@ This method is meant for those using a desktop device or single board computer w
     Now use [docker](https://docs.docker.com/get-docker/) to run `movieweb` as background service.
   
       ```bash
-      # sudo-flix is the current working directory
+      # P-Stream is the current working directory
       $ docker compose up --detach
       ```
   </Steps.Step>
   
   <Steps.Step>
     Verify that setup was successful
-      - Navigate to `http://localhost`. You should see the UI for `sudo-flix`. Find something to watch and make sure that it plays. 
+      - Navigate to `http://localhost`. You should see the UI for `P-Stream`. Find something to watch and make sure that it plays. 
       - View logs with
   
       ```bash
@@ -241,7 +241,7 @@ This method is meant for those using a desktop device or single board computer w
 
 ### To Perform Updates For New Releases of Movie Web
 
-Make sure `sudo-flix` is your current working directory and run:
+Make sure `P-Stream` is your current working directory and run:
 
 ```bash
 # Re-build the image and start the container
