@@ -123,7 +123,7 @@ export default function WeblateRedirect() {
           </a>{' '}
           and check out our{' '}
           <a
-            href="https://github.com/sussy-code"
+            href="https://github.com/Pasithea0"
             onMouseEnter={(e) =>
               (e.currentTarget.style.textDecoration = 'underline')
             }

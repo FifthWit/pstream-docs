@@ -24,7 +24,7 @@ const starLinks = [
 ];
 
 export default defineTheme({
-  github: 'sussy-code/smov',
+  github: 'Pasithea0/smov',
   navigation: [
     link('Discord', '/links/discord', {
       style: 'star',

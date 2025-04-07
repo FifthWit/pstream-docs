@@ -1,1 +1,1 @@
-Please visit the [main document at primary repository](https://github.com/sussy-code/smov/blob/dev/.github/CONTRIBUTING.md).
+Please visit the [main document at primary repository](https://github.com/Pasithea0/smov/blob/dev/.github/CONTRIBUTING.md).
