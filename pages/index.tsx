@@ -75,7 +75,7 @@ export default function LandingPage() {
         </Hero.Subtitle>
         <Hero.Actions>
           <Button to="/self-hosting/hosting-intro">Get Started</Button>
-          <Button to="https://github.com/sussy-code/smov" type="secondary">
+          <Button to="https://github.com/Pasithea0/smov" type="secondary">
             Open on GitHub
           </Button>
         </Hero.Actions>
