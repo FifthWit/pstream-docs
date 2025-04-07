@@ -35,7 +35,7 @@ export const HoverEffect = ({
             {hoveredIndex === idx && (
               <motion.span
                 className="absolute inset-0 h-full w-full block rounded-3xl"
-                style={{ backgroundColor: 'rgba(85, 31, 102, 1)' }}
+                style={{ backgroundColor: '#282438' }}
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -72,7 +72,7 @@ export const Card = ({
         'rounded-2xl h-full w-full p-4 overflow-hidden border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20',
         className,
       )}
-      style={{ backgroundColor: 'rgba(88, 28, 122, 1)' }}
+      style={{ backgroundColor: '#6E23C3' }}
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
