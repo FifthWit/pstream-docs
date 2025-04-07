@@ -2,13 +2,13 @@
 nixPkgs = ["nodejs", "openssl"]
 
 [phases.install]
-cmds = ["npm install -g pnpm@8.15.4", "pnpm install --frozen-lockfile"]
+cmds = ["npm install"]
 
 [phases.build]
-cmds = ["pnpm build"]
+cmds = ["npm run build"]
 
 [start]
-cmd = "pnpm dlx serve out"
+cmd = "npx serve out"
 
 [variables]
 NODE_ENV = "production"
