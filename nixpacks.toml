@@ -8,7 +8,7 @@ cmds = ["corepack enable", "pnpm install --frozen-lockfile"]
 cmds = ["pnpm build"]
 
 [start]
-cmd = "pnpm start"
+cmd = "pnpm dlx serve out"
 
 [variables]
 NODE_ENV = "production"
