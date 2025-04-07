@@ -25,9 +25,9 @@
           POSTGRES_DB: movie_web_backend
           POSTGRES_PASSWORD: YourPasswordHere
         networks:
-          - sudo-flix-network
+          - pstream-network
 
-      sudo-flix-backend:
+      pstream-backend:
         image: ghcr.io/sussy-code/backend:latest
         restart: unless-stopped
         environment:
@@ -47,11 +47,11 @@
         depends_on:
           - postgres
         networks:
-          - sudo-flix-network
+          - pstream-network
 
-      sudo-flix-frontend:
+      pstream-frontend:
         build:
-          context: https://github.com/sussy-code/smov.git
+          context: https://github.com/Pasithea0/smov.git
           args:
             TMDB_READ_API_KEY: "YourTMDBReadAPIKeyHere"
             CORS_PROXY_URL: "https://cors.example.tld https://second.cors.example.tld"
@@ -64,26 +64,26 @@
         ports:
           - "80:80"
         networks:
-          - sudo-flix-network
+          - pstream-network
         restart: unless-stopped
 
-      sudo-flix-proxy:
+      pstream-proxy:
         image: ghcr.io/sussy-code/sudo-proxy:latest
         ports:
           - "3000:3000"
         networks:
-          - sudo-flix-network
+          - pstream-network
         restart: unless-stopped
 
     networks:
-      sudo-flix-network:
+      pstream-network:
         driver: bridge
     ```
     **Important:** 
     * Replace `YourPasswordHere` with your secure database password.
     * Generate a strong session secret and replace `32CharacterLongStringHere`.
     * Replace `TMDBReadAPIKey` with your api key learn more [here](../client/tmdb.mdx).
-    * replace `yourDomainHere` with whatever you'll be using to access your main site, like sudo-flix.app
+    * replace `yourDomainHere` with whatever you'll be using to access your main site, like pstream.app
     * replace `meta__name` and `meta__description`
   </Steps.Step>
 
