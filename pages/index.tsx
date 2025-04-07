@@ -1,14 +1,65 @@
-import {
-  Button,
-  Card,
-  CardGrid,
-  GuiderLayout,
-  Hero,
-  Frame,
-} from '@neato/guider/client';
+import { Button, GuiderLayout, Hero, Frame } from '@neato/guider/client';
 import logoUrl from '../public/transparent-logo.png';
+import { HoverEffect } from '../components/ui/hover-card-effect';
 
 export default function LandingPage() {
+  const featureCards = [
+    {
+      title: 'Open Source',
+      description:
+        'P-Stream is open source and free to use. You can host it yourself or use our hosted version.',
+      link: '/self-hosting/hosting-intro',
+    },
+    {
+      title: 'Custom Player',
+      description:
+        'Enjoy a fully custom video player including streaming integration, subtitle customization and easy TV season navigation.',
+      link: '/features/custom-player',
+    },
+    {
+      title: 'Saves your progress',
+      description:
+        'Will remember your progress in movies and TV shows, so you can easily continue where you left off.',
+      link: '/features/progress-tracking',
+    },
+    {
+      title: 'Bookmarking',
+      description:
+        'Allows you to bookmark your favorite movies and TV shows, so you can easily find them again.',
+      link: '/features/bookmarks',
+    },
+    {
+      title: 'Syncing across devices',
+      description:
+        'Enjoy uninterrupted streaming as your progress, proxies, and bookmarks sync effortlessly across all your devices.',
+      link: '/features/sync',
+    },
+    {
+      title: 'Modular by design',
+      description:
+        "Mix and match different parts of the sudo-flix service, host your backend or use ours, it'll work either way.",
+      link: '/features/modular',
+    },
+    {
+      title: 'Multiple Languages',
+      description:
+        'Supports over 25 languages, including English, German, French, Spanish, Italian, Czech, Hindi, Arabic, Hebrew and more.',
+      link: '/features/languages',
+    },
+    {
+      title: 'Customizable',
+      description:
+        'Supports various themes, subtitle colors and subtitle sizes so you can make it look however you want.',
+      link: '/features/customization',
+    },
+    {
+      title: 'Progressive Web App Support',
+      description:
+        'Supports PWA, so you can install it on your phone and use it just like a native app.',
+      link: '/features/pwa',
+    },
+  ];
+
   return (
     <GuiderLayout meta={{ layout: 'page' }}>
       <Hero>
@@ -30,43 +81,9 @@ export default function LandingPage() {
         </Hero.Actions>
       </Hero>
       <Frame plain={true}>
-        <CardGrid>
-          <Card icon="material-symbols:hangout-video-off" title="No Ads">
-            sudo-flix will never show ads, enjoy watching without interruptions.
-          </Card>
-          <Card icon="ic:baseline-ondemand-video" title="Custom Player">
-            Enjoy a fully custom video player including streaming integration,
-            subtitle customization and easy TV season navigation.
-          </Card>
-          <Card icon="mdi:content-save" title="Saves your progress">
-            Will remember your progress in movies and TV shows, so you can
-            easily continue where you left off.
-          </Card>
-          <Card icon="mdi:bookmark" title="Bookmarking">
-            Allows you to bookmark your favorite movies and TV shows, so you can
-            easily find them again.
-          </Card>
-          <Card icon="mdi:cloud-refresh" title="Syncing across devices">
-            Enjoy uninterrupted streaming as your progress, proxies, and
-            bookmarks sync effortlessly across all your devices.
-          </Card>
-          <Card icon="mdi:power-plug-outline" title="Modular by design">
-            Mix and match different parts of the sudo-flix service, host your
-            backend or use ours, it&apos;ll work either way.
-          </Card>
-          <Card icon="mdi:flag" title="Multiple Languages">
-            Supports over 25 languages, including English, German, French,
-            Spanish, Italian, Czech, Hindi, Arabic, Hebrew and more.
-          </Card>
-          <Card icon="mdi:brush-variant" title="Customizable">
-            Supports various themes, subtitle colors and subtitle sizes so you
-            can make it look however you want.
-          </Card>
-          <Card icon="mdi:cellphone" title="Progressive Web App Support">
-            Supports PWA, so you can install it on your phone and use it just
-            like a native app.
-          </Card>
-        </CardGrid>
+        <div className="max-w-5xl mx-auto px-8">
+          <HoverEffect items={featureCards} />
+        </div>
       </Frame>
     </GuiderLayout>
   );
