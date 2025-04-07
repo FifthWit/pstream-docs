@@ -47,20 +47,20 @@ export default defineTheme({
   meta: (pageMeta) => (
     <NextSeo
       {...{
-        title: `${pageMeta.title ?? "Watch your favorite shows and movies for free with no ads ever! (っ'ヮ'c)"} | sudo-flix`,
+        title: `${pageMeta.title ?? "Watch your favorite shows and movies for free with no ads ever! (っ'ヮ'c)"} | P-Stream`,
         description:
           pageMeta.description ??
-          'sudo-flix is a free and open source streaming site, no ads, no tracking, no nonsense.',
+          'P-Stream is a free and open source streaming site, no tracking, no nonsense.',
         openGraph: {
           images: [
             {
               url: coverUrl.src,
             },
           ],
-          title: `${pageMeta.title ?? "Watch your favorite shows and movies for free with no ads ever! (っ'ヮ'c)"} | sudo-flix`,
+          title: `${pageMeta.title ?? "Watch your favorite shows and movies for free with best streams ever! (っ'ヮ'c)"} | P-Stream`,
           description:
             pageMeta.description ??
-            'sudo-flix is a free and open source streaming site, no ads, no tracking, no nonsense.',
+            'P-Stream is a free and open source streaming site, no tracking, no nonsense.',
         },
         twitter: {
           cardType: 'summary_large_image',
