@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["nodejs", "openssl"]
+
+[phases.install]
+cmds = ["corepack enable", "pnpm install --frozen-lockfile"]
+
+[phases.build]
+cmds = ["pnpm build"]
+
+[start]
+cmd = "pnpm start"
+
+[variables]
+NODE_ENV = "production"
