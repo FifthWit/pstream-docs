@@ -37,7 +37,7 @@ export default function LandingPage() {
     {
       title: 'Modular by design',
       description:
-        "Mix and match different parts of the sudo-flix service, host your backend or use ours, it'll work either way.",
+        "Mix and match different parts of the P-Stream service, host your backend or use ours, it'll work either way.",
       link: '/features/modular',
     },
     {
@@ -65,10 +65,10 @@ export default function LandingPage() {
       <Hero>
         <div style={{ paddingBottom: '0.7em' }}>
           <Frame>
-            <img src={logoUrl.src} alt="Logo of sudo-flix" />
+            <img src={logoUrl.src} alt="Logo of P-Stream" />
           </Frame>
         </div>
-        <Hero.Title>sudo-flix</Hero.Title>
+        <Hero.Title>P-Stream</Hero.Title>
         <Hero.Subtitle>
           A cutesy app for watching your favorite movies and shows. Totally free
           and open source, forever!
