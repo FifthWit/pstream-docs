@@ -33,13 +33,11 @@ title: 'Deploy'
   
   <Steps.Step>
     Configure the environment variables:
-      - `VITE_CORS_PROXY_URL`: Enter your proxy URL here. Make sure to not have a slash at the end of your URL.
-  
-        Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `https://test-proxy.test.workers.dev`
-  
-      - `VITE_TMDB_READ_API_KEY`: Enter your TMDB Read Access Token here. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
-  
-      - `VITE_BACKEND_URL`: Only set if you have a self-hosted backend. Put in your backend URL. Check out [configuration reference](../client/configuration.mdx) for details. Make sure to not have a slash at the end of the URL.
+    ```env
+    VITE_CORS_PROXY_URL = PUT_A_PROXY_URL_HERE (Example https://test-proxy.test.workers.dev)
+    VITE_TMDB_READ_API_KEY = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzlkZWYyZDY5ZWFlNDk4ZjJiOTI4MTgyNDdjM2ViMCIsInN1YiI6IjY2MjdmMGJlNjJmMzM1MDE0YmQ4NTFmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.h3KpPvkiaz8uNz1bntAKqsPrxG_4UUWaY3kYME6N6m8
+    VITE_BACKEND_URL = PUT_A_BACKEND_URL_HERE (only needed for self host)(Example https://test-backend.test.workers.dev)
+    ```
   </Steps.Step>
   
   <Steps.Step>
@@ -99,8 +97,9 @@ title: 'Deploy'
   <Steps.Step>
     Select the `Environment variable` drop down and add the below variables.
     ```env
-    VITE_CORS_PROXY_URL = PUT_A_PROXY_URL_HERE
+    VITE_CORS_PROXY_URL = PUT_A_PROXY_URL_HERE (Example https://test-proxy.test.workers.dev)
     VITE_TMDB_READ_API_KEY = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzlkZWYyZDY5ZWFlNDk4ZjJiOTI4MTgyNDdjM2ViMCIsInN1YiI6IjY2MjdmMGJlNjJmMzM1MDE0YmQ4NTFmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.h3KpPvkiaz8uNz1bntAKqsPrxG_4UUWaY3kYME6N6m8
+    VITE_BACKEND_URL = PUT_A_BACKEND_URL_HERE (only needed for self host)(Example https://test-backend.test.workers.dev)
     ```
   </Steps.Step>
 
@@ -129,16 +128,12 @@ title: 'Deploy'
   </Steps.Step>
   
   <Steps.Step>
-    Put your proxy URL in-between the double quotes of `VITE_CORS_PROXY_URL: ""`. Make sure to not have a slash at the end of your URL.
-    Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `VITE_CORS_PROXY_URL: "https://test-proxy.test.workers.dev"`
-  </Steps.Step>
-  
-  <Steps.Step>
-    Put your TMDB Read Access Token inside the quotes of `VITE_TMDB_READ_API_KEY: ""`. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
-  </Steps.Step>
-  
-  <Steps.Step>
-    If you have a self-hosted backend server, enter your URL in the `VITE_BACKEND_URL` variable. Check out [configuration reference](../client/configuration.mdx) for details. Make sure to not have a slash at the end of the URL.
+    Configure your enviroment variables
+    ```env
+    VITE_CORS_PROXY_URL = PUT_A_PROXY_URL_HERE (Example https://test-proxy.test.workers.dev)
+    VITE_TMDB_READ_API_KEY = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzlkZWYyZDY5ZWFlNDk4ZjJiOTI4MTgyNDdjM2ViMCIsInN1YiI6IjY2MjdmMGJlNjJmMzM1MDE0YmQ4NTFmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.h3KpPvkiaz8uNz1bntAKqsPrxG_4UUWaY3kYME6N6m8
+    VITE_BACKEND_URL = PUT_A_BACKEND_URL_HERE (only needed for self host)(Example https://test-backend.test.workers.dev)
+    ```
   </Steps.Step>
   
   <Steps.Step>
@@ -185,19 +180,18 @@ This method is meant for those using a desktop device or single board computer w
   </Steps.Step>
   
   <Steps.Step>
-    Within the `docker-compose.yaml` file uncomment `args`, `TMDB_READ_API_KEY`, `CORS_PROXY_URL`. 
+    Within the `docker-compose.yaml` file uncomment `args`, `TMDB_READ_API_KEY`, `CORS_PROXY_URL`. Only uncomment `BACKEND_URL` if you are hosting the backend. 
       - Make sure `args` is in-line with `context` 
       - Make sure `TMDB_READ_API_KEY` and `CORS_PROXY_URL` are tabbed once to the right of `args`.
   </Steps.Step>
   
   <Steps.Step>
-    Put your proxy URL in-between the double quotes of `CORS_PROXY_URL: ""`. Make sure to not have a slash at the end of your URL. 
-  
-    Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `CORS_PROXY_URL: "https://test-proxy.test.workers.dev"`
-  </Steps.Step>
-  
-  <Steps.Step>
-    Put your TMDB Read Access Token inside the quotes of `TMDB_READ_API_KEY: ""`. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
+     Configure your enviroment variables
+```env
+    CORS_PROXY_URL = PUT_A_PROXY_URL_HERE (Example https://test-proxy.test.workers.dev)
+    TMDB_READ_API_KEY = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzlkZWYyZDY5ZWFlNDk4ZjJiOTI4MTgyNDdjM2ViMCIsInN1YiI6IjY2MjdmMGJlNjJmMzM1MDE0YmQ4NTFmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.h3KpPvkiaz8uNz1bntAKqsPrxG_4UUWaY3kYME6N6m8
+    BACKEND_URL = PUT_A_BACKEND_URL_HERE (only needed for self host)(Example https://test-backend.test.workers.dev)
+    ```
   </Steps.Step>
   
   <Steps.Step>
